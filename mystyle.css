@@ -1,0 +1,15 @@
+header{
+    background-image: url('img/world.jpg');
+    background-size: cover;
+}
+.back img{
+    transform: rotate(-180deg); 
+    cursor: pointer;
+}
+.next img{
+    cursor: pointer;
+}
+.hibas{
+    border:2px solid red;
+    background-color: red;
+}
