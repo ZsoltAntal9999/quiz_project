@@ -16,7 +16,9 @@
 
 <div class="row justify-content-center">
     <div class="col-3 bg-light back "><img  class='back' src="img/next.svg" alt=""></div>
-    <div class="col-6 border text-center"><img id="foto" src="" alt=""></div>
+    <div class="col-6 border text-center"><img id="foto" src="" alt="">
+        <div id="vegeredmeny"></div>
+    </div>
     <div class="col-3 bg-light next" ><img class='next' src="img/next.svg" alt=""></div>
     
 </div>
@@ -27,7 +29,8 @@
 </div>
 
 <div id="eredmeny"></div>
-
+<div id="kontinens_id"><?=$_GET['id']?></div>
+<div id="rossz">0</div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src='zaszlok.js'></script>
 <script src="orszag.js">

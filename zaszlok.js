@@ -30,6 +30,10 @@ $(()=>{
             $('input[type=radio]').prop('checked', false);
             $('#eredmeny').text('') //az előző törlése
         }
+    else if(getIndex(src)==flags.length-1 && $('#eredmeny').text()=='OK'){
+            console.log("végeredmény")
+            vegeredmeny()
+    }
     })
     $('.back').on('click',()=>{
         let src= $('#foto').attr('src')
@@ -50,4 +54,20 @@ function showPhoto(i){
      return
 }
 
+function vegeredmeny(){
+        let kontinensid=document.getElementById("kontinens_id")
+        let rossz=document.getElementById("rossz")
+        let kontinens=document.getElementById("kontinens")
+        $.ajax({
+            url : "vegeredmeny.php",
+            type : "POST",
+            data : 'kontinens=' + kontinens + '&rossz='+rossz+'&kontinensid='+kontinensid,
+            success : function(data) {
+                console.log(data)
+            },
+        error: function() {
+            console.log('hiba:Ajaxnál')
+        }         
+        });                  
+}
 
