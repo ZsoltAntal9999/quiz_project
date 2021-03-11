@@ -2,13 +2,13 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Freelancer - Start Bootstrap Theme</title>
+        <title>Quiz - Country Flags</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -32,7 +32,7 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.php#kontinensek">Kontinensek</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">A zászlókról</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -75,8 +75,10 @@ session_start();
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div class="col-lg-2 "><img src="img/dania_kicsi.png" width="150px" height="100px" id="dania_kicsi"><label for="dania_kicsi">Dánia zászlaja a legrégebbi.</label><img src="img/svajc_kicsi.png" width="150px" height="100px" id="svajc_kicsi"><label for="svajc_kicsi">Svájc zászlaja adta a Nemzetközi Vöröskereszt zászlajának ötletét.</label><img src="img/ecuador_kicsi.png" width="150px" height="100px" id="ecuador_kicsi"><label for="ecuador_kicsi">Vannak országok, amiknek lobogóján különböző állatok láthatók, bár a legnépszerűbb a madár.</label></div>
+                    <div class="col-lg-3 ml-auto"><p class="lead">A legelterjedtebb feladata egy zászlónak egy nép vagy ország szimbolizálása. Talán eszünkbe sem jutna, de az országok zászlói számos információt tartalmaznak, amik sokkal összetettebbek és érdekesebbek, mint gondolnánk. Amikor megnézünk egy zászlót, értékeljük a színét, formáját és mintázatát, de nem gondolunk arra, hogy milyen módon készült és miért pont olyan, amilyen.</p></div>
+                    <div class="col-lg-3 mr-auto"><p class="lead">Mindannyian tudjuk, hogy a zászló egy rúdra rögzített, meghatározott színezésű és mintájú textil. Általában téglalap alakú, de ettől függetlenül más formák is jelen vannak. Rendeltetése eredetileg katonai volt, célja pedig a csapatok azonosítása és vezetése volt. Jeladásra még napjainkban használnak zászlókat, például a hajózásban vagy a vasúti közlekedésben. Trikolórnak nevezzük a három különböző sávból álló zászlókat. Ilyen például hazánk zászlaja, a francia vagy az olasz nemzeti lobogó is. </p></div>
+                    <div class="col-lg-2 mr-auto"><img src="img/holland_kicsi.png" width="150px" height="100px" id="holland_kicsi"><label for="holland_kicsi">Hollandia zászlaja a legrégebbi trikolór.</label><img src="img/azerbaijan_kicsi.png" width="150px" height="100px" id="azerbaijan_kicsi"><label for="azerbaijan_kicsi">A csillag és a félhold.A csillag és a félhold az iszlám államot képviseli, valamint azok az országok tüntetik fel zászlajukon, ahol ezt a vallást követik.</label><img src="img/Africa/ssudan.png" width="175px" height="100px" id="del-sudan_kicsi"><label for="del-sudan_kicsi">Dél-Szudán zászlaja a legújabb a világon.</label></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
@@ -84,6 +86,9 @@ session_start();
                         <i class="fas fa-download mr-2"></i>
                         Szeretnél többet megtudni Európa zászlóiról?
                     </a>
+                </div>
+                <div class="text-right mt-4">
+                    <p>Források: https://mocool.eu/10-fantasztikus-teny-a-vilag-zaszloirol-amit-eddig-nem-tudtal/ <br> https://hu.wikipedia.org/wiki/Z%C3%A1szl%C3%B3</p>
                 </div>
             </div>
         </section>
