@@ -55,15 +55,35 @@ function showPhoto(i){
 }
 
 function vegeredmeny(){
-        let kontinensid=document.getElementById("kontinens_id")
-        let rossz=document.getElementById("rossz")
-        let kontinens=document.getElementById("kontinens")
+        let kontinensidj=document.getElementById("kontinens_id").innerHTML
+        let rosszj=document.getElementById("rossz").innerHTML
+        console.log("Rossz: "+rossz)
+        let kontinensj=document.getElementById("kontinens").innerHTML
         $.ajax({
             url : "vegeredmeny.php",
             type : "POST",
-            data : 'kontinens=' + kontinens + '&rossz='+rossz+'&kontinensid='+kontinensid,
+            data : 'kontinensj=' + kontinensj + '&rosszj='+rosszj+'&kontinensidj='+kontinensidj,
             success : function(data) {
                 console.log(data)
+                $('#foto').attr("src","")
+                $('#jatek_eredmeny').html(data)
+                console.log("Szoveg: "+data.indexOf("Gratulálunk!"))
+                let index=parseInt(data.indexOf("Gratulálunk!"));
+                if(index>-1){
+                    let input = document.createElement("input");
+                    input.type = "text";
+                    input.placeholder="Adj meg egy nevet!";
+                    let obj=document.getElementById("jatek_eredmeny")
+                    obj.appendChild(input);
+                    let btn=document.createElement("button");
+                    let btn_szoveg = document.createTextNode("Mentés");
+                    btn.setAttribute("style","color:red;font-size:23px");
+                    btn.appendChild(btn_szoveg);
+                    btn.onclick = function () {
+                        alert("blabla");
+                      }
+                    obj.appendChild(btn);
+                }
             },
         error: function() {
             console.log('hiba:Ajaxnál')

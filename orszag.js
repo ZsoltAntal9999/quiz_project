@@ -14,6 +14,8 @@ function vizsgal(e){
         console.log("hibas")
         //document.getElementById('foto').classList.add("hibas");
         //console.log('id='+e.target.id)
+        let rossz_valaszok=parseInt(document.getElementById("rossz").innerHTML)
+        document.getElementById("rossz").innerHTML=rossz_valaszok+1;
         document.querySelector("label[for='" + e.target.id + "']").style.color = "red";
         document.getElementById("eredmeny").innerHTML="Nem talált!"
         
