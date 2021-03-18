@@ -66,6 +66,8 @@ function vegeredmeny(){
             success : function(data) {
                 console.log(data)
                 $('#foto').attr("src","")
+                $('#back').remove()
+                $('#next').remove()
                 $('#jatek_eredmeny').html(data)
                 console.log("Szoveg: "+data.indexOf("Gratulálunk!"))
                 let index=parseInt(data.indexOf("Gratulálunk!"));
@@ -80,14 +82,33 @@ function vegeredmeny(){
                     btn.setAttribute("style","color:red;font-size:23px");
                     btn.appendChild(btn_szoveg);
                     btn.onclick = function () {
-                        alert("blabla");
+                        //alert("blabla");
+                        let nev=input.value;
+                        ujrekord(kontinensidj, rosszj, nev)
                       }
                     obj.appendChild(btn);
                 }
             },
         error: function() {
             console.log('hiba:Ajaxnál')
-        }         
+        } 
+
         });                  
 }
 
+function ujrekord(k_id,rossz,nev){
+    //console.log(k_id,rossz,nev);
+    $.ajax({
+        url : "ujrekord.php",
+        type : "POST",
+        data : 'kontinens_id=' + k_id + '&rossz='+rossz+'&jatekosnev='+nev,
+        success : function(data) {
+            console.log(data)
+           
+        },
+    error: function() {
+        console.log('hiba:Ajaxnál')
+    } 
+
+    });                  
+}

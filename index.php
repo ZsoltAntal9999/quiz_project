@@ -19,14 +19,6 @@ session_start();
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="mystyle.css">
-        <style>
-            #erdekesseg_1{
-                color: white;
-            }
-            #erdekesseg_2{
-                color: white;
-            }
-        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -50,7 +42,7 @@ session_start();
         <header class="masthead text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Quiz of Country Flags</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -58,7 +50,7 @@ session_start();
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+                <p class="masthead-subheading font-weight-light mb-0">Country Flags - Nemzetek zászlói</p>
             </div>
         </header>
         <?php

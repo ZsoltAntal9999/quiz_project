@@ -2,7 +2,7 @@
     require_once "config.php";
     //print_r($_GET);
    
-    $sql="Select id, nev from orszagok where kontinens_id={$_GET['id']}";
+    $sql="Select id, nev from orszagok where kontinens_id={$_GET['id']} order by Rand()";
     $stmt=$db->query($sql);
     $str2="";
     while($row=$stmt->fetch()){
@@ -15,11 +15,11 @@
 <h1 id="kontinens" class='text-center'><?=$_GET['nev']?></h1>
 
 <div class="row justify-content-center">
-    <div class="col-3 bg-light back "><img  class='back' src="img/next.svg" alt=""></div>
+    <div class="col-3 bg-light back " id="back"><img  class='back' src="img/next.svg" alt="" ></div>
     <div class="col-6 border text-center"><img id="foto" src="" alt=""><div id="jatek_eredmeny"></div>
         <div id="vegeredmeny"></div>
     </div>
-    <div class="col-3 bg-light next" ><img class='next' src="img/next.svg" alt=""></div>
+    <div class="col-3 bg-light next" id="next"><img class='next' src="img/next.svg" alt="" ></div>
     
 </div>
 
