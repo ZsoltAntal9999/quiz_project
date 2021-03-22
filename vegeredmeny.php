@@ -1,3 +1,11 @@
+<style>
+    #siker_kep{
+        height: 300px;
+    }
+</style>
+<div id="siker">
+    <img src="img/gold_medal.png" alt="" id="siker_kep">
+</div>
 <?php
     require_once "config.php";
     extract($_POST);
@@ -7,7 +15,7 @@
     extract($row);
     /*echo $jatekosnev."-".$rossz;*/
     $szoveg="";
-    if($rosszj<$rossz){
+    if($rosszj<=$rossz){
         $szoveg="Gratulálunk! Te vagy a legjobb ebben a kategóriában!";
     }
 $str="<table class='table table-bordered'>
@@ -18,9 +26,9 @@ $str="<table class='table table-bordered'>
     </thead>
     <tbody>
         <tr class='table-success'>
-        <td>{$kontinensj}</td>
-        <td>{$jatekosnev}</td>
-        <td>{$rossz}</td>
+        <td id='rekord_kontinensid'>{$kontinensj}</td>
+        <td id='rekord_jatekos'>{$jatekosnev}</td>
+        <td id='rekord_rossz'>{$rossz}</td>
         </tr>
     </tbody>
     <caption>

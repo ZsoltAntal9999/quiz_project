@@ -104,7 +104,9 @@ function ujrekord(k_id,rossz,nev){
         data : 'kontinens_id=' + k_id + '&rossz='+rossz+'&jatekosnev='+nev,
         success : function(data) {
             console.log(data)
-           
+            document.getElementById("rekord_kontinensid").innerHTML=k_id
+            document.getElementById("rekord_rossz").innerHTML=rossz
+            document.getElementById("rekord_jatekos").innerHTML=nev
         },
     error: function() {
         console.log('hiba:Ajaxnál')
