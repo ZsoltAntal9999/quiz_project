@@ -14,7 +14,7 @@
 ?>
 <style>
     #foto{
-    height: 300px;
+    max-height: 300px;
 }
 </style>
 
