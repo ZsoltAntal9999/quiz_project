@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -75,10 +76,10 @@ session_start();
                 </div>
                 <!-- About Section Content-->
                 <div class="row text-justify">
-                    <div class="col-lg-2 mr-auto text-white"><img src="img/dania_kicsi.png" width="150px" height="100px" id="dania_kicsi"><div>Dánia zászlaja a legrégebbi.</div><img src="img/svajc_kicsi.png" width="150px" height="100px" id="svajc_kicsi"><div>Svájc zászlaja adta a Nemzetközi Vöröskereszt zászlajának ötletét.</div><img src="img/ecuador_kicsi.png" width="150px" height="100px" id="ecuador_kicsi"><div>Vannak országok, amiknek lobogóján különböző állatok láthatók, bár a legnépszerűbb a madár.</div></div>
-                    <div class="col-lg-3 ml-auto"><p class="lead">A legelterjedtebb feladata egy zászlónak egy nép vagy ország szimbolizálása. Talán eszünkbe sem jutna, de az országok zászlói számos információt tartalmaznak, amik sokkal összetettebbek és érdekesebbek, mint gondolnánk. Amikor megnézünk egy zászlót, értékeljük a színét, formáját és mintázatát, de nem gondolunk arra, hogy milyen módon készült és miért pont olyan, amilyen.</p></div>
-                    <div class="col-lg-3 mr-auto"><p class="lead">Mindannyian tudjuk, hogy a zászló egy rúdra rögzített, meghatározott színezésű és mintájú textil. Általában téglalap alakú, de ettől függetlenül más formák is jelen vannak. Rendeltetése eredetileg katonai volt, célja pedig a csapatok azonosítása és vezetése volt. Jeladásra még napjainkban használnak zászlókat, például a hajózásban vagy a vasúti közlekedésben. Trikolórnak nevezzük a három különböző sávból álló zászlókat. Ilyen például hazánk zászlaja, a francia vagy az olasz nemzeti lobogó is. </p></div>
-                    <div class="col-lg-2 mr-auto erdekessegek"><img src="img/holland_kicsi.png" width="150px" height="100px" id="holland_kicsi"><div>Hollandia zászlaja a legrégebbi trikolór.</div><img src="img/azerbaijan_kicsi.png" width="150px" height="100px" id="azerbaijan_kicsi"><div>A csillag és a félhold.A csillag és a félhold az iszlám államot képviseli, valamint azok az országok tüntetik fel zászlajukon, ahol ezt a vallást követik.</div><img src="img/Africa/ssudan.png" width="175px" height="100px" id="del-sudan_kicsi"><div>Dél-Szudán zászlaja a legújabb a világon.</div></div>
+                    <div class="col-2 text-white"><img src="img/dania_kicsi.png" class="img-fluid pt-3" id="dania_kicsi"><div>Dánia zászlaja a legrégebbi.</div><img src="img/svajc_kicsi.png" class="img-fluid pt-3" id="svajc_kicsi"><div>Svájc zászlaja adta a Nemzetközi Vöröskereszt zászlajának ötletét.</div><img src="img/ecuador_kicsi.png" class="img-fluid pt-3" id="ecuador_kicsi"><div>Vannak országok, amiknek lobogóján különböző állatok láthatók, bár a legnépszerűbb a madár.</div></div>
+                    <div class="col-4"><p class="lead">A legelterjedtebb feladata egy zászlónak egy nép vagy ország szimbolizálása. Talán eszünkbe sem jutna, de az országok zászlói számos információt tartalmaznak, amik sokkal összetettebbek és érdekesebbek, mint gondolnánk. Amikor megnézünk egy zászlót, értékeljük a színét, formáját és mintázatát, de nem gondolunk arra, hogy milyen módon készült és miért pont olyan, amilyen.</p></div>
+                    <div class="col-4 "><p class="lead">Mindannyian tudjuk, hogy a zászló egy rúdra rögzített, meghatározott színezésű és mintájú textil. Általában téglalap alakú, de ettől függetlenül más formák is jelen vannak. Rendeltetése eredetileg katonai volt, célja pedig a csapatok azonosítása és vezetése volt. Jeladásra még napjainkban használnak zászlókat, például a hajózásban vagy a vasúti közlekedésben. Trikolórnak nevezzük a három különböző sávból álló zászlókat. Ilyen például hazánk zászlaja, a francia vagy az olasz nemzeti lobogó is. </p></div>
+                    <div class="col-2 erdekessegek"><img src="img/holland_kicsi.png" class="img-fluid pt-3" id="holland_kicsi"><div>Hollandia zászlaja a legrégebbi trikolór.</div><img src="img/azerbaijan_kicsi.png" class="img-fluid pt-3" id="azerbaijan_kicsi"><div>A csillag és a félhold.A csillag és a félhold az iszlám államot képviseli, valamint azok az országok tüntetik fel zászlajukon, ahol ezt a vallást követik.</div><img src="img/Africa/ssudan.png" class="img-fluid pt-3" id="del-sudan_kicsi"><div>Dél-Szudán zászlaja a legújabb a világon.</div></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
@@ -105,40 +106,52 @@ session_start();
                 </div>
                 <!-- Contact Section Form-->
                 <div class="row">
+                <?php
+                    $email="";
+                    if(isset($_POST['kuldes'])){
+                        $email=$_POST['mail'];
+                        $body=$_POST['msg'];
+                        echo $email;
+                        echo $body;
+                        include 'mailContact.php';
+                        header('Location: index.php');
+                    }
+                ?>
+                <div>Email: <?=$email?></div>
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                            <div class="control-group">
+                        <form class="form" method="Post">
+                            
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Name</label>
-                                    <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                                    <input class="form-control" name="nev" id="name" type="text" placeholder="Name" required="required" />
                                     <p class="help-block text-danger"></p>
                                 </div>
-                            </div>
-                            <div class="control-group">
+                    
+                            
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Email Address</label>
-                                    <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                                    <input class="form-control" name="mail" id="email" type="email" placeholder="Email Address" required="required"  />
                                     <p class="help-block text-danger"></p>
                                 </div>
-                            </div>
-                            <div class="control-group">
+                            
+                            
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Phone Number</label>
-                                    <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                    <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required"  />
                                     <p class="help-block text-danger"></p>
                                 </div>
-                            </div>
-                            <div class="control-group">
+                            
+                            
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Message</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea class="form-control" name="msg" id="message" rows="5" placeholder="Message" required="required" ></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
-                            </div>
+                           
                             <br />
                             <div id="success"></div>
-                            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit" name="kuldes">Küldés</button></div>
                         </form>
                     </div>
                 </div>

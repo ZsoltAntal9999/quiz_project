@@ -22,7 +22,7 @@
 
 <div class="row justify-content-center">
     <div class="col-3 bg-light back " id="back"><img  class='back' src="img/next.svg" alt="" ></div>
-    <div class="col-6 border text-center align-self-center"><img id="foto" src="" alt=""><div id="jatek_eredmeny"></div>
+    <div class="col-6 border text-center align-self-center"><img id="foto" src="" alt="" class="border"><div id="jatek_eredmeny"></div>
         <div id="vegeredmeny"></div>
     </div>
     <div class="col-3 bg-light next" id="next"><img class='next' src="img/next.svg" alt="" ></div>
