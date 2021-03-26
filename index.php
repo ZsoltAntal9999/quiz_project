@@ -114,10 +114,11 @@ ob_start();
                         echo $email;
                         echo $body;
                         include 'mailContact.php';
-                        header('Location: index.php');
+                        echo '<script> alert("Köszönjük a véleményét!")</script>';
+                        header('Location: index.php#contact');
                     }
                 ?>
-                <div class="pb-2">Email: <?=$email?></div>
+            
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                         <form class="form" method="Post">
@@ -134,14 +135,7 @@ ob_start();
                                     <input class="form-control" name="mail" id="email" type="email" placeholder="Email cím" required="required"  />
                                     <p class="help-block text-danger"></p>
                                 </div>
-                            
-                            
-                                <div class="form-group  controls mb-0 pb-2">
-                                    <label>Telefonszám</label>
-                                    <input class="form-control" id="phone" type="tel" placeholder="Telefonszám"/>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            
+
                             
                                 <div class="form-group  controls mb-0 pb-2">
                                     <label>Üzenet</label>

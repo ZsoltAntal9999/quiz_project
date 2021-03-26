@@ -38,7 +38,7 @@ try {
    //Content
     $mail->isHTML(true);                            // Set email format to HTML
     //$mail->Subject = 'megrendelés igazolása';
-    $sub = '=?UTF-8?B?'.base64_encode('megrendelés igazolása').'?=';
+    $sub = '=?UTF-8?B?'.base64_encode('Új vélemény').'?=';
     $mail->Subject = $sub;
    
     $mail->Body    = $body;
