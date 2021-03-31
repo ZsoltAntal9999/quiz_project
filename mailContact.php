@@ -1,7 +1,7 @@
 <?php
 
 $dir = realpath(__DIR__."/phpMailer/"); 
-echo "dir:".$dir;
+//echo "dir:".$dir;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require $dir.'\Exception.php';
@@ -43,7 +43,7 @@ try {
    
     $mail->Body    = $body;
     $mail->send();
-    echo 'Message has been sent';
+    //echo 'Message has been sent';
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }

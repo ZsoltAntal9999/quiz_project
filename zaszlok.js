@@ -84,7 +84,7 @@ function vegeredmeny(){
                     btn.onclick = function () {
                         //alert("blabla");
                         let nev=input.value;
-                        ujrekord(kontinensidj, rosszj, nev)
+                        ujrekord(kontinensidj, rosszj, nev, kontinensj)
                       }
                     obj.appendChild(btn);
                 }
@@ -96,15 +96,15 @@ function vegeredmeny(){
         });                  
 }
 
-function ujrekord(k_id,rossz,nev){
-    //console.log(k_id,rossz,nev);
+function ujrekord(k_id,rossz,nev,k_nev){
+    console.log(k_id,rossz,nev,k_nev);
     $.ajax({
         url : "ujrekord.php",
         type : "POST",
         data : 'kontinens_id=' + k_id + '&rossz='+rossz+'&jatekosnev='+nev,
         success : function(data) {
             console.log(data)
-            document.getElementById("rekord_kontinensid").innerHTML=k_id
+            document.getElementById("rekord_kontinensid").innerHTML=k_nev
             document.getElementById("rekord_rossz").innerHTML=rossz
             document.getElementById("rekord_jatekos").innerHTML=nev
         },
