@@ -25,7 +25,7 @@ ob_start();
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="index.php">Quiz - Start page</a>
+                <a class="navbar-brand js-scroll-trigger" href="index.php">Quiz - Kezdőoldal</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -43,7 +43,7 @@ ob_start();
         <header class="masthead text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Quiz of Country Flags</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Nemzetek zászlói kvíz</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -165,12 +165,10 @@ ob_start();
                         </p>
                     </div>
                     <!-- Footer About Text-->
-                    <div class="col-lg-6">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Rólunk</h4>
                         <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
+                            A kvíz záródolgozatom céljából készült.
                         </p>
                     </div>
                 </div>
@@ -178,7 +176,7 @@ ob_start();
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright © Your Website 2020</small></div>
+            <div class="container"><small>Copyright © Your Website 2021</small></div>
         </div>
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed">
