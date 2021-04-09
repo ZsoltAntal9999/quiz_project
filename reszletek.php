@@ -21,22 +21,22 @@
 <h1 id="kontinens" class='text-center'><?=$_GET['nev']?></h1>
 
 <div class="row justify-content-center">
-    <div class="col-3 bg-light back " id="back"><img  class='back' src="img/next.svg" alt="" ></div>
-    <div class="col-6 border text-center align-self-center"><img id="foto" src="" alt="" class="border"><div id="jatek_eredmeny"></div>
+    <div class="col-md-3 col-3 bg-light back " id="back"><img  class='back' src="img/next.svg" alt="" ></div>
+    <div class="col-md-6 col-12  border text-center align-self-center"><img id="foto" src="" alt="" class="border img-fluid"><div id="jatek_eredmeny"></div>
         <div id="vegeredmeny"></div>
     </div>
-    <div class="col-3 bg-light next" id="next"><img class='next' src="img/next.svg" alt="" ></div>
+    <div class="col-md-3 col-3 bg-light next" id="next"><img class='next' src="img/next.svg" alt="" ></div>
     
 </div>
 
-<div  class="col text-center m-2 bg-light p-5" id="orszagok">
+<div  class="col-12 col-md text-center m-2 bg-light fluid p-5" id="orszagok">
     <?=$str2?>
-    <input type="text" id="kitalalando_id" value="" >
+    <input type="text" id="kitalalando_id" value="" class="d-none">
 </div>
 
 <div id="eredmeny"></div>
-<div id="kontinens_id"><?=$_GET['id']?></div>
-<div id="rossz">0</div>
+<div id="kontinens_id" class="d-none"><?=$_GET['id']?></div>
+<div id="rossz" class="d-none">0</div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src='zaszlok.js'></script>
 <script src="orszag.js">
