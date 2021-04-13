@@ -107,15 +107,9 @@ ob_start();
                 <!-- Contact Section Form-->
                 <div class="row">
                 <?php
-                    $email="";
+                    //$email="";
                     if(isset($_POST['kuldes'])){
-                        $email=$_POST['mail'];
-                        $body=$_POST['msg'];
-                        include 'mailContact.php';
-                        echo '<script> alert("Köszönjük a véleményét!");
-                                        window.location.href="index.php#contact";
-                        </script>';
-                        //header('Location: index.php#contact');
+                        include("uzenet.php");
                     }
                 ?>
             
