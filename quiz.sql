@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2021. Már 05. 20:29
+-- Létrehozás ideje: 2021. Ápr 15. 13:23
 -- Kiszolgáló verziója: 10.4.11-MariaDB
 -- PHP verzió: 7.2.26
 
@@ -102,7 +102,98 @@ INSERT INTO `orszagok` (`id`, `nev`, `kontinens_id`) VALUES
 (38, 'El Salvador', 2),
 (39, 'USA', 2),
 (40, 'Costa Rica', 2),
-(41, 'Guatemala', 2);
+(41, 'Guatemala', 2),
+(42, 'Bolivia', 3),
+(43, 'Brasil', 3),
+(44, 'Chile', 3),
+(45, 'Colombia', 3),
+(46, 'Ecuador', 3),
+(47, 'Paraguay', 3),
+(48, 'Peru', 3),
+(49, 'Uruguay', 3),
+(50, 'Algeria', 4),
+(51, 'Angola', 4),
+(52, 'Botswana', 4),
+(53, 'Burundi', 4),
+(54, 'Cameroun', 4),
+(55, 'Cape Verde', 4),
+(56, 'Chad', 4),
+(57, 'Democratic Republic of the Congo', 4),
+(58, ' Ivory Coast', 4),
+(59, 'Egypt', 4),
+(60, 'Ethiopia', 4),
+(61, 'Ghana', 4),
+(62, 'Guinea', 4),
+(63, 'Kenya', 4),
+(64, 'Lybia', 4),
+(65, 'Madagascar', 4),
+(66, 'Morocco', 4),
+(67, 'Nigeria', 4),
+(68, 'South Africa', 4),
+(69, 'Seychelles', 4),
+(70, 'South Sudan', 4),
+(71, 'Sudan', 4),
+(72, 'Tunis', 4),
+(73, 'Afghanistan', 5),
+(74, 'Bangladesh', 5),
+(75, 'China', 5),
+(76, 'Georgia', 5),
+(77, 'India', 5),
+(78, 'Indonesia', 5),
+(79, 'Iran', 5),
+(80, 'Iraq', 5),
+(81, 'Israel', 5),
+(82, 'Japan', 5),
+(83, 'Kazakhstan', 5),
+(84, 'Laos', 5),
+(85, 'Malaysia', 5),
+(86, 'Maldives', 5),
+(87, 'Mongolia', 5),
+(88, 'North Korea', 5),
+(89, 'Pakistan', 5),
+(90, 'Philippines', 5),
+(91, 'Qatar', 5),
+(92, 'Saudi Arabia', 5),
+(93, 'Singapore', 5),
+(94, 'South Korea', 5),
+(95, 'Thailand', 5),
+(96, 'United Arab Emirates', 5),
+(97, 'Uzbekistan', 5),
+(98, 'Vietnam', 5),
+(99, 'Australia', 6),
+(100, 'Cook-Islands', 6),
+(101, 'Fiji', 6),
+(102, 'Marshall Islands', 6),
+(103, 'Micronesia', 6),
+(104, 'New Zealand', 6),
+(105, 'Papua New Guinea', 6),
+(106, 'Solomon Islands', 6),
+(107, 'Tonga', 6),
+(108, 'Argentina', 3),
+(109, 'Venezuela', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `rekord`
+--
+
+CREATE TABLE `rekord` (
+  `kontinens_id` int(11) NOT NULL,
+  `rossz` int(2) NOT NULL,
+  `jatekosnev` varchar(50) COLLATE utf8_hungarian_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `rekord`
+--
+
+INSERT INTO `rekord` (`kontinens_id`, `rossz`, `jatekosnev`) VALUES
+(1, 1, 'Feri'),
+(2, 0, 'karcsi'),
+(5, 0, 'Fecó'),
+(6, 0, 'Zsolt'),
+(3, 0, 'Zsolti');
 
 -- --------------------------------------------------------
 
@@ -160,76 +251,98 @@ INSERT INTO `reszletek` (`id`, `id_kontinensek`, `foto`, `orszag_id`) VALUES
 (38, 2, 'img/North_America/panama.png', 6),
 (39, 2, 'img/North_America/salvador.png', 38),
 (40, 2, 'img/North_America/usa.png', 39),
-(46, 3, 'img/South_America/bolivia.png', 1),
-(48, 3, 'img/South_America/brasil.png', 1),
-(49, 3, 'img/South_America/chile.png', 1),
-(50, 3, 'img/South_America/columbia.png', 1),
-(51, 3, 'img/South_America/ecuador.png', 1),
-(52, 3, 'img/South_America/paraguay.png', 1),
-(53, 3, 'img/South_America/peru.png', 1),
-(54, 3, 'img/South_America/uruguay.png', 1),
-(56, 4, 'img/Africa/algeria.png', 1),
-(57, 4, 'img/Africa/angola.png', 1),
-(58, 4, 'img/Africa/botswana.png', 1),
-(59, 4, 'img/Africa/burundi.png', 1),
-(60, 4, 'img/Africa/cameroun.png', 1),
-(61, 4, 'img/Africa/capeverde.png', 1),
-(62, 4, 'img/Africa/chad.png', 1),
-(63, 4, 'img/Africa/congodem.png', 1),
-(64, 4, 'img/Africa/coteivore.png', 1),
-(65, 4, 'img/Africa/egypt.png', 1),
-(66, 4, 'img/Africa/ethiopia.png', 1),
-(67, 4, 'img/Africa/ghana.png', 1),
-(68, 4, 'img/Africa/guinea.png', 1),
-(69, 4, 'img/Africa/kenya.png', 1),
-(70, 4, 'img/Africa/lybia.png', 1),
-(71, 4, 'img/Africa/madagascar.png', 1),
-(72, 4, 'img/Africa/morocco.png', 1),
-(73, 4, 'img/Africa/nigeria.png', 1),
-(74, 4, 'img/Africa/safrica.png', 1),
-(75, 4, 'img/Africa/seychelle.png', 1),
-(76, 4, 'img/Africa/ssudan.png', 1),
-(77, 4, 'img/Africa/sudan.png', 1),
-(78, 4, 'img/Africa/tunis.png', 1),
-(79, 5, 'img/Asia/afg.png', 1),
-(80, 5, 'img/Asia/bangladesh.png', 1),
-(81, 5, 'img/Asia/china.png', 1),
-(82, 5, 'img/Asia/georgia.png', 1),
-(83, 5, 'img/Asia/india.png', 1),
-(84, 5, 'img/Asia/indonesia.png', 1),
-(85, 5, 'img/Asia/iran.png', 1),
-(86, 5, 'img/Asia/iraq.png', 1),
-(87, 5, 'img/Asia/israel.png', 1),
-(88, 5, 'img/Asia/japan.png', 1),
-(89, 5, 'img/Asia/kazah.png', 1),
-(90, 5, 'img/Asia/laos.png', 1),
-(91, 5, 'img/Asia/malaysia.png', 1),
-(92, 5, 'img/Asia/maldives.png', 1),
-(93, 5, 'img/Asia/mongolia.png', 1),
-(94, 5, 'img/Asia/nkorea.png', 1),
-(95, 5, 'img/Asia/pakistan.png', 1),
-(96, 5, 'img/Asia/philippines.png', 1),
-(97, 5, 'img/Asia/qatar.png', 1),
-(98, 5, 'img/Asia/saudiarabia.png', 1),
-(99, 5, 'img/Asia/singapore.png', 1),
-(100, 5, 'img/Asia/skorea.png', 1),
-(101, 5, 'img/Asia/thailand.png', 1),
-(102, 5, 'img/Asia/uae.png', 1),
-(103, 5, 'img/Asia/uzbek.png', 1),
-(104, 5, 'img/Asia/vietnam.png', 1),
-(105, 6, 'img/Oceania/australia.png', 1),
-(106, 6, 'img/Oceania/cook.png', 1),
-(107, 6, 'img/Oceania/fiji.png', 1),
-(108, 6, 'img/Oceania/marshall.png', 1),
-(109, 6, 'img/Oceania/micronesia.png', 1),
-(110, 6, 'img/Oceania/newzealand.png', 1),
-(111, 6, 'img/Oceania/papua.png', 1),
-(112, 6, 'img/Oceania/solomon.png', 1),
-(113, 6, 'img/Oceania/tonga.png', 1),
+(46, 3, 'img/South_America/bolivia.png', 42),
+(48, 3, 'img/South_America/brasil.png', 43),
+(49, 3, 'img/South_America/chile.png', 44),
+(50, 3, 'img/South_America/columbia.png', 45),
+(51, 3, 'img/South_America/ecuador.png', 46),
+(52, 3, 'img/South_America/paraguay.png', 47),
+(53, 3, 'img/South_America/peru.png', 48),
+(54, 3, 'img/South_America/uruguay.png', 49),
+(56, 4, 'img/Africa/algeria.png', 50),
+(57, 4, 'img/Africa/angola.png', 51),
+(58, 4, 'img/Africa/botswana.png', 52),
+(59, 4, 'img/Africa/burundi.png', 53),
+(60, 4, 'img/Africa/cameroun.png', 54),
+(61, 4, 'img/Africa/capeverde.png', 55),
+(62, 4, 'img/Africa/chad.png', 56),
+(63, 4, 'img/Africa/congodem.png', 57),
+(64, 4, 'img/Africa/coteivore.png', 58),
+(65, 4, 'img/Africa/egypt.png', 59),
+(66, 4, 'img/Africa/ethiopia.png', 60),
+(67, 4, 'img/Africa/ghana.png', 61),
+(68, 4, 'img/Africa/guinea.png', 62),
+(69, 4, 'img/Africa/kenya.png', 63),
+(70, 4, 'img/Africa/lybia.png', 64),
+(71, 4, 'img/Africa/madagascar.png', 65),
+(72, 4, 'img/Africa/morocco.png', 66),
+(73, 4, 'img/Africa/nigeria.png', 67),
+(74, 4, 'img/Africa/safrica.png', 68),
+(75, 4, 'img/Africa/seychelle.png', 69),
+(76, 4, 'img/Africa/ssudan.png', 70),
+(77, 4, 'img/Africa/sudan.png', 71),
+(78, 4, 'img/Africa/tunis.png', 72),
+(79, 5, 'img/Asia/afg.png', 73),
+(80, 5, 'img/Asia/bangladesh.png', 74),
+(81, 5, 'img/Asia/china.png', 75),
+(82, 5, 'img/Asia/georgia.png', 76),
+(83, 5, 'img/Asia/india.png', 77),
+(84, 5, 'img/Asia/indonesia.png', 78),
+(85, 5, 'img/Asia/iran.png', 79),
+(86, 5, 'img/Asia/iraq.png', 80),
+(87, 5, 'img/Asia/israel.png', 81),
+(88, 5, 'img/Asia/japan.png', 82),
+(89, 5, 'img/Asia/kazah.png', 83),
+(90, 5, 'img/Asia/laos.png', 84),
+(91, 5, 'img/Asia/malaysia.png', 85),
+(92, 5, 'img/Asia/maldives.png', 86),
+(93, 5, 'img/Asia/mongolia.png', 87),
+(94, 5, 'img/Asia/nkorea.png', 88),
+(95, 5, 'img/Asia/pakistan.png', 89),
+(96, 5, 'img/Asia/philippines.png', 90),
+(97, 5, 'img/Asia/qatar.png', 91),
+(98, 5, 'img/Asia/saudiarabia.png', 92),
+(99, 5, 'img/Asia/singapore.png', 93),
+(100, 5, 'img/Asia/skorea.png', 94),
+(101, 5, 'img/Asia/thailand.png', 95),
+(102, 5, 'img/Asia/uae.png', 96),
+(103, 5, 'img/Asia/uzbek.png', 97),
+(104, 5, 'img/Asia/vietnam.png', 98),
+(105, 6, 'img/Oceania/australia.png', 99),
+(106, 6, 'img/Oceania/cook.png', 100),
+(107, 6, 'img/Oceania/fiji.png', 101),
+(108, 6, 'img/Oceania/marshall.png', 102),
+(109, 6, 'img/Oceania/micronesia.png', 103),
+(110, 6, 'img/Oceania/newzealand.png', 104),
+(111, 6, 'img/Oceania/papua.png', 105),
+(112, 6, 'img/Oceania/solomon.png', 106),
+(113, 6, 'img/Oceania/tonga.png', 107),
 (114, 2, 'img/North_America/corica.png', 40),
 (115, 2, 'img/North_America/gua.png', 41),
-(116, 3, 'img/South_America/arg.png', 1),
-(117, 3, 'img/South_America/ven.png', 1);
+(116, 3, 'img/South_America/arg.png', 108),
+(117, 3, 'img/South_America/ven.png', 109);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `uzenetek`
+--
+
+CREATE TABLE `uzenetek` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
+  `uzenet` varchar(356) COLLATE utf8_hungarian_ci NOT NULL,
+  `nev` varchar(100) COLLATE utf8_hungarian_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `uzenetek`
+--
+
+INSERT INTO `uzenetek` (`id`, `email`, `uzenet`, `nev`) VALUES
+(1, 'antzsooldalteszt01@gmail.com', 'teszt', 'Gyula'),
+(2, 'antzsooldalteszt01@gmail.com', 'jfjkngfjknjn', 'Ferenc'),
+(4, 'antzsooldalteszt01@gmail.com', 'uzenet', 'Zsolt');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -257,6 +370,12 @@ ALTER TABLE `reszletek`
   ADD KEY `orszag_id` (`orszag_id`);
 
 --
+-- A tábla indexei `uzenetek`
+--
+ALTER TABLE `uzenetek`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -270,13 +389,19 @@ ALTER TABLE `kontinensek`
 -- AUTO_INCREMENT a táblához `orszagok`
 --
 ALTER TABLE `orszagok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT a táblához `reszletek`
 --
 ALTER TABLE `reszletek`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+
+--
+-- AUTO_INCREMENT a táblához `uzenetek`
+--
+ALTER TABLE `uzenetek`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Megkötések a kiírt táblákhoz
