@@ -9,13 +9,10 @@ require $dir.'\PHPMailer.php';
 require $dir.'\SMTP.php';
 $emailFrom="antzsooldalteszt01@gmail.com";
 $PASS="Zsoltika1111";
-//vagy:
-//$emailFrom="kandoinformatika@gmail.com";
-//$PASS="kando@teszt";
-//$email=$to_email;
-//$body="<p> ez egy teszt email -  áűáőúőúőúéóüö";
+$email=$level;
+$body="<p> ez egy teszt email -  áűáőúőúőúéóüö";
 
-//$body.= "<a href=\"localhost/webshop/webshop.php"."\">Vissza a webshop oldalára</a><p>";     
+$body.= "<a href=\"localhost/quiz/quiz_project/index.php"."\">Vissza a kvíz oldalára</a><p>";     
 
 
 $mail = new PHPMailer(true);         // Passing `true` enables exceptions

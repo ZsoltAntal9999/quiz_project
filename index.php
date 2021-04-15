@@ -91,6 +91,11 @@ ob_start();
                 <div class="text-right mt-4">
                     <p>Források: https://mocool.eu/10-fantasztikus-teny-a-vilag-zaszloirol-amit-eddig-nem-tudtal/ <br> https://hu.wikipedia.org/wiki/Z%C3%A1szl%C3%B3</p>
                 </div>
+                <div>
+                    <?php
+                        include "hirlevel.php";                    
+                    ?>
+                </div>
             </div>
         </section>
         <!-- Contact Section-->
