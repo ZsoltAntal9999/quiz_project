@@ -97,7 +97,6 @@ function vegeredmeny(){
 }
 
 function ujrekord(k_id,rossz,nev,k_nev){
-    console.log(k_id,rossz,nev,k_nev);
     $.ajax({
         url : "ujrekord.php",
         type : "POST",
