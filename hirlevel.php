@@ -2,7 +2,8 @@
     require_once "config.php";
     if(isset($_POST["hirlevel"])){
         extract($_POST);
-        include "mailHirlevel.php";
+        /*include "mailHirlevel.php";*/
+        mail($level, 'Ez egy hírlevél....', 'Üzenet teszt....', 'From: kviz@antzsoweb.nhely.hu');
         echo '<script> alert("Köszönjük hogy feliratkozott a hírlevelünkre!");
                 window.location.href="index.php#about";
 </script>';

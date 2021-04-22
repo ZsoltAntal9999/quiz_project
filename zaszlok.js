@@ -28,7 +28,7 @@ $(()=>{
             showPhoto(getIndex(src)+1)
             $('label').css('color','black')
             $('input[type=radio]').prop('checked', false);
-            $('#eredmeny').text('') //az előző törlése
+            $('#eredmeny').text('')
         }
     else if(getIndex(src)==flags.length-1 && $('#eredmeny').text()=='OK'){
             console.log("végeredmény")
