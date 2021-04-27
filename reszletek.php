@@ -29,7 +29,7 @@
     
 </div>
 
-<div class="col-12 col-md text-start justify-content-between m-2 bg-light fluid p-5" id="orszagok">
+<div class="col-12 col-md text-md-center text-start justify-content-between m-2 bg-light fluid p-5" id="orszagok">
     <?=$str2?>
     <input type="text" id="kitalalando_id" value="" class="d-none">
 </div>

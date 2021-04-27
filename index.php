@@ -119,7 +119,6 @@ ob_start();
                 ?>
             
                     <div class="col-lg-8 mx-auto">
-                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                         <form class="form" method="Post">
                             
                                 <div class="form-group  controls mb-0 pb-2">
